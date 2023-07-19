@@ -30,11 +30,7 @@ body{
     --sptf-font-light: rgba(255, 255, 255, 1);
 }
 
-.container-bg{
-    max-width: 1152px;
-    width: calc(100% - 320px);
-    margin: auto;
-}
+
 .container{
     max-width: 1152px;
     width: 90%;
@@ -115,6 +111,9 @@ body{
 #site_header{
     background-color: var(--sptf-dark);
     height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #site_header button{
@@ -194,7 +193,7 @@ body{
 
 #sidebar{
     height: calc(100vh - 90px);
-    min-width: 230px;
+    width: 230px;
     width: 100%;
     background-color: var(--sptf-darkest);
 }
@@ -210,3 +209,38 @@ footer{
 }
 
 /* #endregion Footer */
+
+/*******************************************************
+
+                        RESPONSIVENESS
+
+********************************************************/
+
+@media screen and (max-width: 878px ) {
+
+    .col-md-2{
+        width: calc((100% / 12 * 2) - 1rem);
+    }
+
+    .col-md-3{
+        width: calc((100% / 12 * 3) - 1rem);
+    }
+    
+    .col-md-4{
+        width: calc(100% / 12 * 4);
+    }
+    
+    .col-md-6{
+        width: calc(100% / 12 * 6);
+    }
+    
+    .col-md-10{
+        width: calc(100% / 12 * 10);
+    }
+    
+    .col-md-12{
+        width: 100%;
+    }
+
+    
+}
