@@ -14,11 +14,13 @@ body{
 
 ********************************************************/
 
+/* #region Utilities */
+
 
 :root{
     --sptf-main: rgba(20, 25, 34, 1);
     --sptf-dark: rgba(8, 11, 18, 1);
-    --sptf-darker: rgba(0, 0, 0, 1);
+    --sptf-darkest: rgba(0, 0, 0, 1);
     --sptf-light-dark: rgba(40, 40, 40, 1);
     
     --sptf-selection: rgba(173, 255, 47, 1);
@@ -26,3 +28,71 @@ body{
     --sptf-font-light-dark: rgba(120, 122, 127, 1);
     --sptf-font-light: rgba(255, 255, 255, 1);
 }
+
+
+.container{
+    max-width: 1152px;
+    width: 90%;
+    margin: auto;
+}
+
+.py-1{
+    padding: 1rem 0;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap
+}
+
+.col-4{
+    width: calc(100% / 12 * 4);
+}
+
+.col-6{
+    width: calc(100% / 12 * 6);
+}
+
+.col-12{
+    width: 100%;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+
+/* #endregion Utilities */
+
+/*******************************************************
+
+                        CONTENT
+
+********************************************************/
+/* #region Header */
+#site_header{
+    background-color: var(--sptf-dark);
+    height: 80px;
+}
+
+#site_header button{
+    border: 1px solid var(--sptf-font-light);
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    background-color: transparent;
+    color: var(--sptf-font-light);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+
+}
+
+/* #endregion Header */
