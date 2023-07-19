@@ -7,3 +7,22 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/*******************************************************
+
+                        UTILITIES
+
+********************************************************/
+
+
+:root{
+    --sptf-main: rgba(20, 25, 34, 1);
+    --sptf-dark: rgba(8, 11, 18, 1);
+    --sptf-darker: rgba(0, 0, 0, 1);
+    --sptf-light-dark: rgba(40, 40, 40, 1);
+    
+    --sptf-selection: rgba(173, 255, 47, 1);
+
+    --sptf-font-light-dark: rgba(120, 122, 127, 1);
+    --sptf-font-light: rgba(255, 255, 255, 1);
+}
