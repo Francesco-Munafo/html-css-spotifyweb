@@ -206,7 +206,7 @@ body{
 ********************************************************/
 
 #sidebar{
-    height: calc(100%) ;
+    height: 100%;
     width: 100%;
     background-color: var(--sptf-darkest);
     padding: 1rem;
@@ -369,6 +369,10 @@ footer{
 
     #sidebar{
         padding: 0;
+    }
+
+    .menu{
+        align-items: center;
     }
 
     .menu .logo_bg, .menu span, .menu h4, .new-playlist, .playlists, .profile .download h5 {
