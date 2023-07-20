@@ -144,8 +144,9 @@ body{
 
 #main{
     background-color: var(--sptf-main);
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     overflow-y: scroll;
+    padding-bottom: 3rem;
 }
 
 .list-inline{
