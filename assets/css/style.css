@@ -26,6 +26,8 @@ body{
     
     --sptf-selection: rgba(173, 255, 47, 1);
 
+    --sptf-timing: rgba(193, 193, 193, 1);
+
     --sptf-font-light-dark: rgba(120, 122, 127, 1);
     --sptf-font-light: rgba(255, 255, 255, 1);
 }
@@ -391,6 +393,37 @@ footer{
     color: var(--sptf-font-light-dark);
 }
 
+.player_controls i{
+    padding: 0 1rem;
+    scale: 1.5;
+}
+
+.progress{
+    margin-top: 1.5rem;
+    color: var(--sptf-font-light);
+}
+.progress_bar{
+    background-color: var(--sptf-font-light-dark);
+    margin: 0 1rem;
+    width: 300px;
+    height: 3.5px;
+    border-radius: 30px;
+}
+
+.timing{
+    background-color: var(--sptf-timing);
+    height: 100%;
+    width: 20%;
+    border-radius: 30px ;
+}
+
+.cursor{
+    height: 10px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--sptf-font-light);
+    border-radius: 50%;
+    display: none;
+}
 
 /* #endregion Footer */
 
@@ -474,6 +507,10 @@ footer{
         padding: 0;
     }
 
+    .menu ul li{
+        padding-left: 0;
+    }
+
     .menu, .profile{
         align-items: center;
     }
@@ -532,3 +569,10 @@ footer{
     color: var(--sptf-font-light);
 }
 
+.progress_bar:hover > .timing{
+    background-color: var(--sptf-selection);
+}
+
+.progress_bar:hover > .timing .cursor{
+    display: block;
+}
