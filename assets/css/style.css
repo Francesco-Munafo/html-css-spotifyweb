@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     overflow-y: hidden;
 }
@@ -18,12 +18,12 @@ body{
 /* #region Utilities */
 
 
-:root{
+:root {
     --sptf-main: rgba(20, 25, 34, 1);
     --sptf-dark: rgba(8, 11, 18, 1);
     --sptf-darkest: rgba(0, 0, 0, 1);
     --sptf-light-dark: rgba(40, 40, 40, 1);
-    
+
     --sptf-selection: rgba(173, 255, 47, 1);
 
     --sptf-timing: rgba(193, 193, 193, 1);
@@ -33,102 +33,102 @@ body{
 }
 
 
-.container{
+.container {
     max-width: 1152px;
     width: 90%;
     margin: auto;
 }
 
-.py-1{
+.py-1 {
     padding: 1rem 0;
 }
 
-.m-0{
+.m-0 {
     margin: 0;
 }
 
-.mt-1{
+.mt-1 {
     margin-top: 1rem;
 }
 
-.mt-2{
+.mt-2 {
     margin-top: 2rem;
 }
 
-.row{
+.row {
     display: flex;
     flex-wrap: wrap
 }
 
-.col-sidebar{
+.col-sidebar {
     width: 230px;
 }
 
-.col-2{
+.col-2 {
     width: calc((100% / 12 * 2) - 1rem);
 }
 
-.col-3{
+.col-3 {
     width: calc(100% / 12 * 3);
 }
 
-.col-4{
+.col-4 {
     width: calc(100% / 12 * 4);
 }
 
-.col-6{
+.col-6 {
     width: calc(100% / 12 * 6);
 }
 
-.col-main{
+.col-main {
     width: calc(100% - 230px);
 }
 
-.col-12{
+.col-12 {
     width: 100%;
 }
 
-.g-1{
+.g-1 {
     gap: 1rem;
 }
 
-.g25{
+.g25 {
     gap: 25%;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
-.column{
+.column {
     flex-direction: column;
 }
 
-.justify-content-end{
+.justify-content-end {
     justify-content: flex-end;
 }
 
-.justify-content-center{
+.justify-content-center {
     justify-content: center;
 }
 
-.justify-content-sb{
+.justify-content-sb {
     justify-content: space-between;
 }
 
-.justify-content-sa{
+.justify-content-sa {
     justify-content: space-around;
 }
 
-.align-items-center{
+.align-items-center {
     align-items: center;
 }
 
-.text-align-center{
+.text-align-center {
     text-align: center;
 }
 
-.center-y{
+.center-y {
     vertical-align: middle;
 }
 
@@ -142,7 +142,7 @@ body{
 ********************************************************/
 /* #region Header */
 
-#site_header{
+#site_header {
     background-color: var(--sptf-dark);
     height: 80px;
     position: sticky;
@@ -150,7 +150,7 @@ body{
     left: 0;
 }
 
-#site_header button{
+#site_header button {
     border: 1px solid var(--sptf-font-light);
     border-radius: 50px;
     padding: 0.75rem 2rem;
@@ -172,24 +172,25 @@ body{
 
 ********************************************************/
 
-#main{
+#main {
     background-color: var(--sptf-main);
     height: calc(100vh - 170px);
     overflow-y: scroll;
     padding-bottom: 3rem;
-    position: relative;
 }
 
-.list-inline{
+.list-inline {
     list-style: none;
 }
 
-.list-inline > li{
+.list-inline>li {
     display: inline-block;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
 }
 
-.list-inline > li > a{
+
+
+.list-inline>li>a {
     text-decoration: none;
     color: var(--sptf-font-light-dark);
     font-weight: 800;
@@ -197,26 +198,57 @@ body{
     line-height: 2.5rem;
 }
 
-.recent .col-2 img, .foryou img, .popular img{
+.album{
+    width: 100%;
+    position: relative;
+}
+
+.album > i{
+    position: absolute;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    color: var(--sptf-font-light);
+    
+    padding: 0.8rem;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+
+
+.recent .col-2 img,
+.foryou img,
+.popular img {
     max-width: 100%;
 }
 
-.recent > h2, .foryou > h5, .popular > h5{
+
+.recent>h2,
+.foryou>h5,
+.popular>h5 {
     margin-bottom: 2rem;
     color: var(--sptf-font-light);
 }
 
-.recent .row .col-2 .card h4, .foryou h2, .foryou h4, .popular > h2, .popular h4{
+.recent .row .col-2 .card h4,
+.foryou h2,
+.foryou h4,
+.popular>h2,
+.popular h4 {
     color: var(--sptf-font-light);
     margin-top: 1rem;
 }
 
-.recent .row .col-2 .card h5, .foryou h5, .popular h5, .popular h3{
+.recent .row .col-2 .card h5,
+.foryou h5,
+.popular h5,
+.popular h3 {
     color: var(--sptf-font-light-dark);
     margin-top: 0.5rem;
 }
 
-.popular .card img{
+.popular .card img {
     border-radius: 50%;
 }
 
@@ -227,29 +259,29 @@ body{
 
 ********************************************************/
 
-#sidebar{
+#sidebar {
     height: 100%;
     width: 100%;
     background-color: var(--sptf-darkest);
     padding: 1rem 0;
 }
 
-#sidebar > .container{
+#sidebar>.container {
     height: 100%;
     width: 100%;
 }
 
-.menu{
+.menu {
     width: 100%;
 }
 
-.logo_bg{
+.logo_bg {
     margin-bottom: 1rem;
     width: 200px;
     padding-left: 1.5rem;
 }
 
-.logo_s{
+.logo_s {
     width: 20px;
     display: none;
     padding: 1rem 0;
@@ -258,31 +290,32 @@ body{
 
 
 
-.menu ul li{
+.menu ul li {
     padding-left: 1.5em
 }
 
-.menu li, .playlists li{
+.menu li,
+.playlists li {
     color: var(--sptf-font-light-dark);
     font-weight: 700;
     list-style: none;
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
-    
+
 }
 
 
-.menu li > img{
+.menu li>img {
     width: 30px;
     filter: opacity(0.5);
 }
 
-.menu li > span{
+.menu li>span {
     padding-left: 0.5rem;
 }
 
-.menu > h4{
+.menu>h4 {
     color: var(--sptf-font-light);
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -291,59 +324,59 @@ body{
 
 
 
-.new-playlist i{
+.new-playlist i {
     background-color: var(--sptf-font-light-dark);
     padding: 0.25rem 0.35rem;
     color: var(--sptf-dark);
     margin-left: 1.5rem;
 }
 
-.new-playlist{
+.new-playlist {
     margin-bottom: 1rem;
 }
 
-.playlists{
+.playlists {
     overflow-y: auto;
     max-height: 250px;
 }
 
 
 
-.new-playlist h4{
+.new-playlist h4 {
     color: var(--sptf-font-light-dark);
     padding-left: 0.5rem;
 }
 
-.profile{
+.profile {
     padding: 0 1rem;
 }
 
-.profile .download{
+.profile .download {
     border-bottom: 2px solid var(--sptf-font-light-dark);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.profile .download img{
+.profile .download img {
     width: 18px;
     fill: var(--sptf-font-light-dark);
 }
 
-.profile .download > h5{
+.profile .download>h5 {
     color: var(--sptf-font-light-dark);
     display: inline-block;
     vertical-align: top;
 
 }
 
-.account img{
+.account img {
     width: 20px;
     aspect-ratio: 1 / 1;
     background-color: var(--sptf-font-light-dark);
     border-radius: 50%;
 }
 
-.account h4{
+.account h4 {
     color: var(--sptf-font-light);
     display: inline-block;
     vertical-align: top;
@@ -352,9 +385,16 @@ body{
 
 /* #endregion Main */
 
+
+/*******************************************************
+
+                        SIDEBAR
+
+********************************************************/
+
 /* #region Footer */
 
-footer{
+footer {
     height: 90px;
     background-color: var(--sptf-light-dark);
     position: fixed;
@@ -363,67 +403,100 @@ footer{
     width: 100%;
 }
 
-#site_footer .container{
+#site_footer .container {
     height: 100%;
     min-width: 100%;
     padding: 0 1rem;
     margin: 0;
 }
 
-.col-6 .foot_center{
+.col-6 .foot_center {
     width: calc(100% / 12 * 6)
 }
 
 
-.track > img{
+.track>img {
     width: 50px;
 }
 
-.track_name{
+.track_name {
     padding-left: 0.5rem;
     color: var(--sptf-font-light);
 }
 
-.track_name h6{
+.track_name h6 {
+    color: var(--sptf-font-light-dark);
+
+}
+
+.track_actions_left {
+    margin-left: 1rem;
     color: var(--sptf-font-light-dark);
 }
 
-.track_actions_left{
-    margin-left: 1rem ;
-    color: var(--sptf-font-light-dark);
+.player_controls,
+.right_controls, .fa-volume-high {
+    color: var(--sptf-font-light);
 }
 
-.player_controls i{
+.player_controls i {
     padding: 0 1rem;
-    scale: 1.5;
 }
 
-.progress{
+.player_controls .fa-circle-play {
+    scale: 2;
+}
+
+.progress {
     margin-top: 1.5rem;
     color: var(--sptf-font-light);
 }
-.progress_bar{
+
+.progress_bar {
     background-color: var(--sptf-font-light-dark);
     margin: 0 1rem;
-    width: 300px;
+    width: 100%;
     height: 3.5px;
     border-radius: 30px;
 }
 
-.timing{
+.timing {
     background-color: var(--sptf-timing);
     height: 100%;
     width: 20%;
-    border-radius: 30px ;
+    border-radius: 30px;
 }
 
-.cursor{
+.cursor {
     height: 10px;
     aspect-ratio: 1 / 1;
     background-color: var(--sptf-font-light);
     border-radius: 50%;
     display: none;
 }
+
+.right_controls i {
+    padding: 0.25rem;
+    scale: 0.8
+}
+
+
+.volume_bar {
+    background-color: var(--sptf-font-light-dark);
+    margin: 0 1rem;
+    width: 80px;
+    height: 3.5px;
+    border-radius: 30px;
+}
+
+.volume_value {
+    background-color: var(--sptf-timing);
+    height: 100%;
+    width: 20%;
+    border-radius: 30px;
+}
+
+
 
 /* #endregion Footer */
 
@@ -433,108 +506,113 @@ footer{
 
 ********************************************************/
 
-@media screen and (max-width: 878px ) {
+@media screen and (max-width: 878px) {
 
-    .col-md-2{
+    .col-md-2 {
         width: calc((100% / 12 * 2) - 1rem);
     }
 
-    .col-md-3{
+    .col-md-3 {
         width: calc((100% / 12 * 3) - 1rem);
     }
-    
-    .col-md-4{
+
+    .col-md-4 {
         width: calc(100% / 12 * 4);
     }
-    
-    .col-md-6{
+
+    .col-md-6 {
         width: calc(100% / 12 * 6);
     }
-    
-    .col-md-10{
+
+    .col-md-10 {
         width: calc(100% / 12 * 10);
     }
-    
-    .col-md-12{
+
+    .col-md-12 {
         width: 100%;
     }
 
-    
+
 }
 
 @media screen and (max-width: 639px) {
 
-    .col-s-2{
+    .col-s-2 {
         width: calc((100% / 12 * 2) - 1rem);
     }
 
-    .col-s-3{
+    .col-s-3 {
         width: calc((100% / 12 * 3) - 1rem);
     }
-    
-    .col-s-4{
+
+    .col-s-4 {
         width: calc(100% / 12 * 4);
     }
-    
-    .col-s-6{
+
+    .col-s-6 {
         width: calc((100% / 12 * 6) - 1rem);
     }
-    
-    .col-s-10{
+
+    .col-s-10 {
         width: calc(100% / 12 * 10);
     }
-    
-    .col-s-12{
+
+    .col-s-12 {
         width: 100%;
     }
-    
+
 }
 
 @media screen and (max-width: 552px) {
 
 
 
-    .col-sidebar{
+    .col-sidebar {
         width: 50px;
         max-height: 100%;
     }
 
-    .col-main{
+    .col-main {
         width: calc(100% - 50px);
     }
 
-    #sidebar{
+    #sidebar {
         padding: 0;
     }
 
-    .menu ul li{
+    .menu ul li {
         padding-left: 0;
     }
 
-    .menu, .profile{
+    .menu,
+    .profile {
         align-items: center;
     }
 
-    .profile{
+    .profile {
         padding-bottom: 0.5rem;
     }
 
-    .menu .logo_bg, .menu span, .menu h4, .new-playlist, .playlists, .profile .download h5, .account h4 {
+    .menu .logo_bg,
+    .menu span,
+    .menu h4,
+    .new-playlist,
+    .playlists,
+    .profile .download h5,
+    .account h4 {
         display: none;
     }
 
-    .menu .logo_s{
+    .menu .logo_s {
         display: block;
     }
 
-    .profile .download{
+    .profile .download {
         border-bottom: 0
     }
 
-    .account h4{
-        
-    }
-    
+    .account h4 {}
+
 }
 
 /*******************************************************
@@ -542,37 +620,110 @@ footer{
                         EFFECTS
 
 ********************************************************/
+/* #region Header */
+
+.upgrade:hover {
+    transform: scale(1.2);
+}
+
+/* #endregion Header */
+
+/* #region Main */
+
+.browse li>a:focus {
+    border-bottom: 2px solid var(--sptf-selection);
+    padding: 0.5rem 0;
+    color: var(--sptf-font-light);
+}
+
+.browse li>a:hover {
+    color: var(--sptf-font-light);
+}
+
+.card:hover > .album  i{
+    opacity: 1 ;
+}
+
+.card:hover img {
+    filter:brightness(0.3)
+}
+
+/* #endregion Main */
 
 
-.menu li:hover > img{
+/* #region Sidebar */
+
+.menu li:hover>img {
     filter: opacity(1);
 }
 
-.menu ul li:hover{
-  border-left: 2px solid var(--sptf-selection);
-  color: var(--sptf-font-light);
+.menu ul li:hover {
+    border-left: 2px solid var(--sptf-selection);
+    color: var(--sptf-font-light);
 }
 
-.playlists ul li:hover{
+.menu ul li:hover {
+    color: var(--sptf-font-light);
+}
+
+
+
+.playlists ul li:hover {
     border: none;
 }
 
-.new-playlist:hover > h4 {
+.new-playlist:hover>h4 {
     color: var(--sptf-font-light);
 }
 
-.new-playlist:hover > i {
+.new-playlist:hover>i {
     background-color: var(--sptf-font-light);
 }
 
-.player_controls{
+.profile .download > h5:hover{
     color: var(--sptf-font-light);
 }
 
-.progress_bar:hover > .timing{
+
+
+
+/* #endregion Sidebar */
+
+/* #region Footer */
+
+.progress_bar:hover>.timing {
     background-color: var(--sptf-selection);
 }
 
-.progress_bar:hover > .timing .cursor{
+.progress_bar:hover>.timing .cursor {
     display: block;
 }
+
+.volume_bar:hover>.volume_value {
+    background-color: var(--sptf-selection);
+}
+
+.volume_bar:hover>.volume_value .cursor {
+    display: block;
+}
+
+.player_controls .fa-circle-play:hover{
+    scale: 2.3;
+}
+
+.track:hover > .track_name h6{
+    text-decoration: underline;
+    color: var(--sptf-font-light);
+}
+
+.track img:hover > .track_name h6{
+    text-decoration: underline;
+    color: var(--sptf-font-light);
+}
+
+.track_actions_left i:hover{
+    color: var(--sptf-font-light);
+}
+
+
+/* #endregion Footer */
